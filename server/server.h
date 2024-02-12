@@ -5,20 +5,27 @@
 #ifndef GROUPCHAT_SERVER_H
 #define GROUPCHAT_SERVER_H
 
-void initialize_server(int port);
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-void start_listening();
+int initialize_server(int port);
 
-void accept_client_connection();
+void start_listening(int server_socket);
 
-void handle_client_messages(int client_socket);
+int accept_client_connection(int server_socket);
 
-void broadcast_message(int sender_socket, const char *message);
+char* handle_client_messages(int client_socket, int buffer_size);
+
+//void broadcast_message(int sender_socket, const char *message);
 
 void disconnect_client(int client_socket);
 
-void handle_client_commands(int client_socket, const char *command);
+//void handle_client_commands(int client_socket, const char *command);
 
-void shutdown_server();
+void shutdown_server(int server_socket);
 
 #endif //GROUPCHAT_SERVER_H
