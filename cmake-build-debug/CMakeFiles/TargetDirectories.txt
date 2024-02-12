@@ -1,0 +1,3 @@
+/Users/vokinrehc/Projects/C projects/GroupChat/cmake-build-debug/CMakeFiles/GroupChat.dir
+/Users/vokinrehc/Projects/C projects/GroupChat/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vokinrehc/Projects/C projects/GroupChat/cmake-build-debug/CMakeFiles/rebuild_cache.dir
